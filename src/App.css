@@ -1,0 +1,47 @@
+/* =========================================
+   កូដរចនាបន្ថែមសម្រាប់ Website Profile
+   ========================================= */
+
+/* 1. រចនា Scrollbar (របារអូសចុះឡើងខាងស្តាំ) ឱ្យតូចស្អាត និងមានពណ៌ខៀវ */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f3f4f6; /* ពណ៌ប្រផេះស្រាលសម្រាប់ Light Mode */
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #111827; /* ពណ៌ខ្មៅសម្រាប់ Dark Mode */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3b82f6; /* ពណ៌ខៀវ (Blue-500) */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2563eb; /* ពណ៌ខៀវដិតពេលយក Mouse ទៅដាក់ពីលើ */
+}
+
+/* 2. ប្តូរពណ៌ពេល Highlight ទាញយកអក្សរ (Text Selection) */
+::selection {
+  background-color: #3b82f6; /* ផ្ទៃពណ៌ខៀវ */
+  color: white; /* អក្សរពណ៌ស */
+}
+
+/* 3. បន្ថែមចលនា (Animation) ផុសឡើងស្រាលៗ សម្រាប់ទំព័រទាំងមូល */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeIn 0.8s ease-out forwards;
+}
